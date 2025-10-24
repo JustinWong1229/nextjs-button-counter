@@ -7,8 +7,13 @@ export default function Counter () {
     return (
         <div>
             <p>Current Count: {count}</p>
+            <br />
             <button onClick={() => setCount(count +1)}>Plus One</button>
+      <br></br>
+      <br></br>
+        <button id="Minus one" onClick={() => setCount(count -1)}>Minus One</button> 
         </div>
     );
 }
+
 
