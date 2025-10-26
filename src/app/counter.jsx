@@ -17,6 +17,7 @@ export default function Counter ({initialCount = 0, initialStep =1}) {
         <br />
         <button id="reset" onClick={() => setCount(0)}>Reset Counter</button> 
         <br />
+        <p>Enter a custom amount:</p>
 
         <input 
         id="step"
@@ -24,10 +25,10 @@ export default function Counter ({initialCount = 0, initialStep =1}) {
         value={step}
         onChange={(e) => setStep(e.target.value)} />
         
-        <button onClick={() => setCount(count => count + step)}>Add a custom amount</button> 
+        <button onClick={() => setCount(count => count + step)}>Add custom amount</button> 
         <br />
         <br />
-        <button onClick={() => setCount(count => count - step)} disabled={count-step < 0}>Subtract a custom amount</button> 
+        <button onClick={() => setCount(count => count - step)} disabled={count-step < 0}>Subtract custom amount</button> 
 
         </div>
     );
