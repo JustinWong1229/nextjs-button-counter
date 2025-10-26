@@ -1,12 +1,13 @@
 'use client';
 import { useState } from 'react';
 
-export default function Counter () {
-    const [count, setCount] = useState(0);
+export default function Counter ({initialCount = 0, initialStep =1}) {
+    const [count, setCount] = useState(initialCount);
+    const [step,setStep ] = useState(initialStep);
 
     return (
         <div>
-            <p>Current Count: {count}</p>
+            <p aria-live="polite">Current Count: {count}</p>
             <br />
             <button onClick={() => setCount(count +1)}>Plus One</button>
       <br></br>
@@ -16,8 +17,21 @@ export default function Counter () {
         <br />
         <button id="reset" onClick={() => setCount(0)}>Reset Counter</button> 
         <br />
+
+        <input 
+        id="step"
+        type="number"
+        value={step}
+        onChange={(e) => setStep(e.target.value)} />
+        
+        <button onClick={() => setCount(count => count + step)}>Add a custom amount</button> 
+        <br />
+        <br />
+        <button onClick={() => setCount(count => count - step)} disabled={count-step < 0}>Subtract a custom amount</button> 
+
         </div>
     );
 }
+
 
 
