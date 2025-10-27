@@ -13,4 +13,4 @@ A custom step input that allows the user to set how much they want to add/subtra
 Logic to prevent the count from going below zero
 
 Known Issues and limitations:
-Right now the only known issue is that the add custom amount button does not fully work as intended. Instead of adding on to the counter it is adding the number to the end of the counter. For example, if the counter was at 1 and I wanted to add 4 to it, the counter would make it 14 instead of 5.
+There are no known issues or limitations for this project.
